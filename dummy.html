@@ -1,0 +1,63 @@
+<head>
+    <style>
+    .v-bar {
+    width: 192px;
+    height: 742px;
+    position: absolute;
+}
+ul.menu {
+    width: 192px;
+    height: 712px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+ul.menu::-webkit-scrollbar {
+    display: none;
+}
+li.item {
+    width: 192px;
+    height: 100px;
+    background: beige;
+    border: 0.1px solid;
+}
+button.test-btn {
+    position: absolute;
+    bottom: 10px;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<div class="v-bar">
+    <ul class="menu">
+        <li class="item">1</li>
+        <li class="item">1</li>
+        <li class="item">1</li>
+        <li class="item">1</li>
+        <li class="item">1</li>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">2</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+    </ul>
+    <button class="test-btn">x</button>
+</div>
+
+<script>
+    	$(".test-btn").on("click", function(){
+            console.log("hi");
+		$(".menu").animate( { scrollTop: '+=102' }, 200);
+	});
+</script>
+
